@@ -95,7 +95,7 @@ fun SaveTask(navController: NavController) {
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(20.dp, 60.dp, 20.dp, 0.dp),
+                    .padding(20.dp, 20.dp, 20.dp, 0.dp),
                 label = "Titulo tarefa",
                 maxLines = 1,
                 keyboardType = KeyboardType.Text
