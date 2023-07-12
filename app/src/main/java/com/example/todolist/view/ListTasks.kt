@@ -9,8 +9,13 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarColors
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
@@ -20,12 +25,14 @@ import com.example.todolist.ui.theme.BLACK
 import com.example.todolist.ui.theme.Purple700
 import com.example.todolist.ui.theme.WHITE
 
+
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun ListTasks(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
+
                 title = {
                     Text(
                         text = "Lista de Tarefas",
@@ -33,7 +40,8 @@ fun ListTasks(navController: NavController) {
                         fontWeight = FontWeight.Bold,
                         color = WHITE
                     )
-                }
+                },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = Purple700)
             )
         },
         containerColor = BLACK,
